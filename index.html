@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Вязаные Сокровища</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+          <div class="logo">
+            <img src="logo.png" alt="Логотип Вязаные Сокровища">
+          </div>
+        </a>
+        <h1>Вязаные Сокровища</h1>
+    </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="продукция.html">Продукция</a></li>
+      <li><a href="о_нас.html">О Нас</a></li>
+      <li><a href="карта_сайта.html">Карта сайта</a></li>
+      <li><a href="блог.html">Блог</a></li>
+      <li><a href="галерея.html">Галерея</a></li>
+      <li><a href="события.html">События</a></li>
+      <li><a href="отзывы.html">Отзывы</a></li>
+      <li><a href="партнеры.html">Партнеры</a></li>
+      <li><a href="контакты.html">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="content-wrapper">
+        <section class="featured-item">
+        <h2>Изысканные вязаные изделия ручной работы</h2>
+        <p>У нас вы найдете уникальные вязаные товары, созданные с любовью и теплом рук мастеров.</p>
+        <img src="featured_item.jpg" alt="Изысканное вязаное изделие">
+        </section>
+
+        <section class="featured-item">
+        <h2>Новые поступления</h2>
+        <div class="featured-item">
+            <img src="featured_item.jpg" alt="Вязаный товар 1">
+            <p>Шикарный свитер "Зимнее вдохновение"
+                <br>Материал: натуральная овечья шерсть
+                <br>Цвета: голубой, серый, белый
+                <br>Узор: косы и араны
+                <br>Теплый и стильный свитер, созданный для того, чтобы обогревать вас в холодные зимние дни. Уникальный дизайн с косами и аранами придает ему неповторимость.
+            </p>
+        </section>
+    </div>
+  </main>
+
+  <div class="elfsight-app-b8aba3f5-4299-4d12-893d-ce97e777b508" data-elfsight-app-lazy></div>
+
+  <footer>
+    <p id="datetime"></p>
+    <p>Контактная информация: телефон: +7 123 456 7890, email: info@vyazanye-sokrovishcha.ru</p>
+  </footer>
+
+  <script>
+    // Скрипт для отображения текущей даты и времени
+    function updateDateTime() {
+      const datetimeElement = document.getElementById('datetime');
+      const currentDate = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+      const formattedDate = currentDate.toLocaleDateString('ru-RU', options);
+      datetimeElement.textContent = `Текущая дата и время: ${formattedDate}`;
+    }
+
+    // Обновляем дату и время каждую секунду
+    setInterval(updateDateTime, 1000);
+
+    // Вызываем функцию один раз при загрузке страницы
+    updateDateTime();
+  </script>
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+
+</body>
+
+</html>
